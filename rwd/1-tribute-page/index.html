@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!-- FREECODECAMP.ORG INSTRUCTIONS
+    User Story #1: My tribute page should have an element with a corresponding id="main", which contains all other elements.
+    User Story #2: I should see an element with a corresponding id="title", 
+            which contains a string (i.e. text) that describes the subject 
+            of the tribute page (e.g. "Dr. Norman Borlaug").
+    User Story #3: I should see either a figure or a div element with a corresponding 
+            id="img-div".
+    User Story #4: Within the img-div element, I should see an img element 
+            with a corresponding id="image".
+    User Story #5: Within the img-div element, I should see an element with a 
+            corresponding id="img-caption" that contains textual content describing 
+            the image shown in img-div.
+    User Story #6: I should see an element with a corresponding id="tribute-info", 
+            which contains textual content describing the subject of the tribute page.
+    User Story #7: I should see an a element with a corresponding id="tribute-link", 
+            which links to an outside site that contains additional information 
+            about the subject of the tribute page. HINT: You must give your 
+            element an attribute of target and set it to _blank in order for 
+            your link to open in a new tab (i.e. target="_blank").
+    User Story #8: The img element should responsively resize, relative to 
+            the width of its parent element, without exceeding its original size.
+    User Story #9: The img element should be centered within its parent element.
+-->
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <title>OKHP Fallen Heroes</title>
+    </head>
+    <body>
+        <main>
+
+            <h1 id="title">Oklahoma Highway Patrol's Fallen Heroes</h1>
+
+
+            <div id="tribute-info">
+
+            </div>
+
+            <a id="tribute-link" href="#" target="_blank">
+
+            </a>
+
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" />
+        <script>
+            const data = [
+                {
+                    name: "Sam Henderson",
+                    rank: "Trooper",
+                    death: "May 7, 1941",
+                    joined: "1937",
+                    description: "Trooper Henderson had stopped a vehicle near Lawton for defective lights. As Henderson was making contact with the violator, he was struck by another vehicle. The car that struck and killed Henderson left the scene but was later located by a local police officer. An intoxicated Fort Sill soldier was in the vehicle. The man claimed two other soldiers had fled; they were never found and it has been determined that they did not exist."
+                },
+                {
+                    name: "James Long",
+                    rank: "Trooper",
+                    death: "July 12, 1942",
+                    joined: "1942",
+                    description: "Trooper Long had worked at Patrol Headquarters until approximately 1:30 a.m. on July 12, 1942. As Long passed a park at Northwest 22nd and Broadway in Oklahoma City, he heard screams from an eighteen year old girl who was being beaten by a man who had followed and attacked her. When Long went to her aid, the attacker fired four shots with one striking Long in the chest. The murderer has never been apprehended."
+                },
+                {
+                    name: "Theo Cobb",
+                    rank: "Trooper",
+                    death: "June 24, 1951",
+                    joined: "1937",
+                    description: "Troopers Cobb and Charles Branch were investigating a collision on State Highway 76 north of Fox. They observed a car approaching at a high rate of speed and Cobb stepped from behind a wrecker with his flashlight to slow it down. Cobb was struck by the left front fender and the driver did not stop. Trooper Branch broadcast an alarm and roadblocks were set up over a ten county area. A 20-year-old Arkansas soldier turned himself in and was later charged with manslaughter."
+                },
+                {
+                    name: "Johnnie Whittle",
+                    rank: "Trooper",
+                    death: "September 14, 1953",
+                    joined: "1943",
+                    description: "Trooper Whittle responded to a report from a man who had given two suspicious men a ride. Around 9:10 a.m. Whittle had picked up the pair and was in the Patrol driveway when one of the men pulled a pistol from a shoulder holster. Whittle moved toward the man as the suspect fired one shot. The killer then fled on foot. The murderer was arrested some two hours later three miles away as he was trying to hitchhike. He was sentenced to a sixty-five year prison sentence following a first-degree manslaughter conviction."
+                },
+                {
+                    name: "John Barter",
+                    rank: "Trooper",
+                    death: "January 23, 1959",
+                    joined: "1953",
+                    description: "Trooper Barter was on patrol on Highway 62 near Altus when he turned onto a county road to investigate a disturbance. He found a parolee and a woman. It was later determined that the pair had shot at the man’s wife and had just tried to kill a black porter. When Barter directed the man to surrender his weapon, the parolee shot the Trooper in the chest. A motorist reported the crime and the two were arrested at an OHP roadblock near Randlett three hours later. The man was executed for the crime in 1960 and the woman was sentenced to prison and paroled in 1975."
+                },
+                {
+                    name: "Howard Crumley",
+                    rank: "Trooper",
+                    death: "June 28, 1970",
+                    joined: "1953",
+                    description: "Trooper Crumley was killed by two shots from his service revolver by two brothers who had brutally murdered a man and had been stopped by Crumley shortly afterward. While Crumley had the driver spread-eagle the passenger pulled a gun and the pair then shot the Trooper. They then kidnapped a woman and forced her to drive them around. One of the men then shot himself and the other one forced the woman to drive him to the residence of a third brother. Troopers and other officers arrested the man after the woman reported the incidents. The twenty-two year-old man was convicted and sentenced to life imprisonment."
+                },
+                {
+                    name: "Larry Smith",
+                    rank: "Trooper",
+                    death: "January 29, 1971",
+                    joined: "1970",
+                    description: "Trooper Smith was making an emergency response to a reported burglary near Tonkawa when a seventeen year-old driver made a left turn in front of his unit on United States Highway 60. Both drivers were killed in the collision."
+                },
+                {
+                    name: "Willie James Walker",
+                    rank: "Trooper",
+                    death: "February 17, 1971",
+                    joined: "1967",
+                    description: "Park officials at Fountainhead Lodge requested OHP assistance in arresting two men on grounds in illegal possession of firearms. Trooper Walker made the arrest and radioed headquarters for a tow truck with the suspects in the patrol unit. One of the men pulled a concealed weapon and fatally wounded Walker and Park Superintendent Leo Newton. A manhunt was launched and two suspects were arrested about eighty-three hours later. Three pistols including the tooper’s service revolver, a rifle, a shotgun and ammunition were recovered."
+                },
+                {
+                    name: "Eugene Ake",
+                    rank: "Trooper",
+                    death: "September 18, 1972",
+                    joined: "1970",
+                    description: "Trooper Ake had apparently made a traffic contact at Northeast 36th and Westminster in Spencer. As Ake interrogated one passenger, a nineteen year-old man grabbed the Trooper’s pistol and shot him twice. After a massive investigation, the man was identified as the assailant by a friend who said he was present at the time of the crime. The man was convicted and sentenced to life in prison."
+                },
+                {
+                    name: "Thomas Isbell",
+                    rank: "Trooper",
+                    death: "December 20, 1972",
+                    joined: "1971",
+                    description: "Trooper Isbell and Trooper Robert C. Foltz were investigating a collision on I-40 west of El Reno, OK. Isbell was measuring skid marks when he was struck by a vehicle driven by a Des Moines, Iowa woman. The woman had been driving for a long period of time and was very tired and sleepy and had nearly struck the patrol unit before colliding with the Trooper. She was charged with negligent homicide."
+                },
+                {
+                    name: "J.C. Magar",
+                    rank: "Trooper",
+                    death: "June 29, 1975",
+                    joined: "1970",
+                    description: "Trooper Magar assisted a Texas motorist and his wife by giving them a ride to Hugo after their vehicle broke down on the highway. After leaving the pair at a telephone, Magar went to the Hugo police department. The motorist came to the police station, got behind the Trooper, grabbed his service revolver and ordered him to drive to the airport. As they approached the unit, the man fatally wounded Magar. Police officers summoned by the dispatcher fired at the assailant, but he turned the weapon on himself and died almost instantly."
+                },
+                {
+                    name: "Larry Crabtree",
+                    rank: "Trooper",
+                    death: "April 4, 1977",
+                    joined: "1964",
+                    description: "He received a report from an attendant at the Heyburn Station that a vehicle had jumped a curb and crossed a ditch to reach the turnpike instead of using the entrance ramp. Crabtree stopped the vehicle and as he approached the vehicle, the sixteen year-old driver turned and fired one shotgun blast at point-blank range. A Citizen Band radio equipped motorist who witnessed the murder alerted Troopers who arrested the five occupants of the vehicle. Three juveniles were later released. The boy was subsequently convicted of murder and sentenced to death."
+                },
+                {
+                    name: "Cell Howell",
+                    rank: "Lieutenant",
+                    death: "April 27, 1977",
+                    joined: "1958",
+                    description: "Lieutenant Howell stopped to assist a motorist and his pregnant wife at Southwest Eighty-ninth on US Highway 62 in Oklahoma City. As Howell approached the vehicle, an intoxicated driver veered from the inside lane to the shoulder and the right front of the vehicle struck the Trooper. The driver, a Chickasha man, left the scene without stopping and was apprehended by the OK City police at Southwest Fifteenth and Agnew and subsequently sentenced to a lengthy prison term."
+                },
+                {
+                    name: "Billy Young",
+                    rank: "Trooper",
+                    death: "May 26, 1978",
+                    joined: "1953",
+                    description: "Trooper Young and Trooper Summers had been assigned to participate in a search for two McAlester Penitentiary escapees being sought for multiple murders committed after their escape in their flight through six states. Trooper Young and Summers encountered the two escapees on a county road near Kenefic and were killed in the resulting gun fight. Both escapees were shot and killed in Caddo by Troopers later that same day."
+                },
+                {
+                    name: '"Pappy" Summers',
+                    rank: "Trooper",
+                    death: "May 26, 1978",
+                    joined: "1946",
+                    description: "Trooper Summers and Trooper Young had been assigned to participate in a search for two McAlester Penitentiary escapees being sought for multiple murders committed after their escape in their flight through six states. Trooper Summers and Young encountered the two escapees on a county road near Kenefic and were killed in the resulting gun fight. Both escapees were shot and killed in Caddo by Troopers later that same day."
+                },
+                {
+                    name: 'James Pat Grimes',
+                    rank: "2nd Lieutenant",
+                    death: "May 26, 1978",
+                    joined: "1966",
+                    description: "2LT Grimes and 2LT H.E. Hughes located two McAlester Penitentiary escapees involved in an earlier gunfight with Troopers Young and Summers near Kenefic when the escapees drove their stolen pickup into a Caddo residence yard. Trooper Lloyd Basinger, pilot of an O.H.P. aircraft, had spotted the stolen vehicle and guided Patrol units until the convicts stopped their vehicle. 2LT Grimes was killed in the resulting gunfight before the two escapees were themselves shot and killed by Troopers."
+                },
+                {
+                    name: 'Richard Oldaker',
+                    rank: "Trooper",
+                    death: "July 3, 1978",
+                    joined: "1969",
+                    description: "Trooper Oldaker was the pilot of the O.H.P. aircraft Trooper Alexander and Ft. Sill solder Spec. 4 Ronnie D. Russell were aboard which was on a low flying mission over the Salt Fork River bed near Hollis. The plane struck a utility pole wire spanning the river and crashed. All three men died in the crash."
+                },
+                {
+                    name: 'Rondal Alexander',
+                    rank: "Trooper",
+                    death: "July 3, 1978",
+                    joined: "1974",
+                    description: "Trooper Alexander and Ft. Sill solder Spec. 4 Ronnie D. Russell were passengers on an O.H.P. aircraft piloted by Trooper Oldaker which was on a low flying mission over the Salt Fork River bed near Hollis. The plane struck a utility pole wire spanning the river and crashed. All three men died in the crash."
+                },
+                {
+                    name: 'Kenny Osborn',
+                    rank: "Trooper",
+                    death: "July 13, 1978",
+                    joined: "1972",
+                    description: "Trooper Osborn had stopped to investigate an abandoned vehicle on the shoulder of the Turner Turnpike in Creek County, which was parked at the end of a construction zone. A semi-trailer rig loaded with steel went out of control while leaving the construction zone and struck and killed Trooper Osborn. The truck driver was charged in Creek County with negligent homicide."
+                },
+                {
+                    name: 'Kenneth Strang',
+                    rank: "2nd Lieutenant",
+                    death: "March 1, 1980",
+                    joined: "1966",
+                    description: "2LT Strang was completing a ten hour shift resulting from bitterly cold and icy weather and was in route to his residence when he ran off the roadway and his cruiser slammed into a bridge abutment. 2LT Strang was killed instantly."
+                },
+                {
+                    name: 'Edward Elliott',
+                    rank: "Trooper",
+                    death: "August 22, 1980",
+                    joined: "1966",
+                    description: "Troopers Elliott and Tom Flanagan had stopped a truck driver for a traffic violation on the H.E. Bailey Turnpike near Lawton. Trooper Elliott was standing between his cruiser and the truck when a vehicle struck the rear of the unit and propelled it into him. Trooper Elliott was dead on arrival at a Lawton hospital. Trooper Flanagan, who was walking beside the truck at that time, sustained minor injuries and later recovered."
+                },
+                {
+                    name: 'Travis Leon Bench',
+                    rank: "Trooper",
+                    death: "October 5, 1983",
+                    joined: "1982",
+                    description: "On the morning of October 5, Bench effected a traffic stop on Highway 97, between Sapulpa and Sand Springs. He ran a license check on the driver and discovered his license was suspended. As Bench attempted to place the man identified as Charles Enoch Brown under arrest, Brown retrieved a pistol and opened fire on Bench striking him in the head. Brown was tried and convicted for murder and received a life sentence."
+                },
+                {
+                    name: 'Mark Harris',
+                    rank: "Water Enforcement Safety Officer",
+                    death: "September 2, 1984",
+                    joined: "1982",
+                    description: "Officer Harris was enroute to investigate a reported drowning at Lake Thunderbird when he stopped a vehicle on I35 near Indian Hills Road in Cleveland County for speeding. As he wrote the citation, a car traveling on the Interstate ran off the road, struck Officer Harris, then smashed into the second car. Officer Harris was thrown into the roadway and struck by a third vehicle. The driver of the vehicle that ran off the road was later charged with manslaughter. The driver of the third vehicle that struck Officer Harris left the scene, and was never found."
+                },
+                {
+                    name: 'Guy David Nalley',
+                    rank: "Trooper",
+                    death: "October 27, 1984",
+                    joined: "1982",
+                    description: "Near 8:20 p.m. Nalley stopped a tractor-trailer rig NW of Sayre. A routine check revealed the truck and trailer were stolen. Nalley requested backup, with Trooper Mike McClellan responding. McClellan reached the scene and found Nalley shot twice in the head. A search was launched and the suspected assailant, William E. Best, was apprehended. Best was charged with murder but committed to Eastern State Hospital for psychiatric evaluation. A woman smuggled a handgun into the institution for Best who took hostages inside the hospital. Best was killed in the incident."
+                },
+                {
+                    name: 'Randy Littlefield',
+                    rank: "Trooper",
+                    death: "January 15, 1990",
+                    joined: "1984",
+                    description: "Trooper Littlefield came upon a stalled vehicle on Highway 20, east of Jay. He proceeded to direct traffic around the stalled vehicle. While attempts were being made by the disabled motorist to restart his vehicle, a car driven by a 68 year-old man struck Littlefield, knocking him under the car being used to jump-start the stalled vehicle. The force of the impact moved the vehicle with Littlefield under it, 75 feet down the road. Littlefield was dead on arrival at Grove Memorial Hospital a short time later. The driver, Ross England, was convicted of first-degree manslaughter."
+                },
+                {
+                    name: 'Duane Grundy',
+                    rank: "Trooper",
+                    death: "April 11, 1990",
+                    joined: "1976",
+                    description: "Near 2:10 a.m. on April 11, Trooper Grundy was on routine patrol on the Will Rogers Turnpike in far northeastern Oklahoma, near the Craig-Ottawa County line. Grundy effected a traffic stop of a vehicle for a burned out headlamp. As he exited his unit and walked up to the vehicle to write down its tag number he was struck by a pickup truck driven by 82 year-old James A. Grundy (not related) of Joplin, Missouri. The force of the impact knocked him into the vehicle he had stopped. He was pronounced dead at the scene."
+                },
+                {
+                    name: 'Joseph Nicolle',
+                    rank: "Trooper",
+                    death: "July 26, 1990",
+                    joined: "1982",
+                    description: "Shortly after noon on the twenty-sixth, Nicolle was piloting the OHP helicopter out of Muskogee, Oklahoma, en route to Watts,Oklahoma in Adair County, to assist Adair County authorities in locating and eradicating a large marijuana field. As Nicolle was flying over US Highway 62, southwest of Tahlequah, the helicopter struck a power line and crashed on the shoulder of the road. He was pronounced dead at the scene of the crash."
+                },
+                {
+                    name: 'Rocky Eales',
+                    rank: "Trooper",
+                    death: "September 24, 1999",
+                    joined: "1979",
+                    description: "Trooper Eales, was shot and killed while assisting the DA’s drug task force in Sequoyah County while attempting to serve felony warrants on September 24. Members of the OHP Tactical Team arrived at a residence near Sallisaw to serve a warrant. Upon approaching the residence Troopers John M. “Buddy” Hamilton and David W. “Rocky” Eales were fired upon. Trooper Hamilton received non-fatal wounds to both shoulders and left eye. Trooper Eales received a fatal wound and expired at the scene. Kenneth Eugene Barrett, 38, is being charged with murder and shooting with intent to kill."
+                },
+                {
+                    name: 'Matthew Evans',
+                    rank: "Trooper",
+                    death: "August 31, 2000",
+                    joined: "1999",
+                    description: "Trooper Evans was west bound on I-40 in Oklahoma City enroute to assist another Trooper who was calling for backup. Unknown to Trooper Evans, Oklahoma City Police Officer Jeffrey Dean Rominger just initiated pursuit of a vehicle which entered I-40 at May Ave. eastbound in the westbound lanes. As they topped a small hill the suspect struck a semi truck causing the suspect and patrol units to collide. Trooper Evans was killed on impact. Officer Rominger was transported to an Oklahoma City hospital and died a short time later. Both occupants in the suspect vehicle also died on impact."
+                },
+                {
+                    name: 'Chris Van Krevelen',
+                    rank: "Trooper",
+                    death: "November 28, 2002",
+                    joined: "1999",
+                    description: "Trooper Van Krevelen was killed in an automobile accident about 4:00 p.m. on Thanksgiving afternoon while responding to a report of a train/car collision near Enid. Trooper Van Krevelen’s patrol car went out of control on the U.S. 81 overpass, overturned and struck a light pole. The patrol car burst into flames and burned."
+                },
+                {
+                    name: 'Nikky Green',
+                    rank: "Trooper",
+                    death: "December 26, 2003",
+                    joined: "1997",
+                    description: "Trooper Green was tragically gunned down by an individual subject in Cotton County. Green made contact with the individual, who was operating a mobile meth lab on a rural county road just west of Devol in the early morning hours. Review of the trooper’s video tape from his patrol car shows he subsequently attempted to arrest the subject and a scuffle ensued resulting in Green being shot and killed."
+                },
+                {
+                    name: 'Steven R. Smith',
+                    rank: "Trooper",
+                    death: "February 9, 2006",
+                    joined: "1999",
+                    description: "Trooper Steve Smith was shot by an armed man at a cemetery near Bernice, Oklahoma. On April 25th, 1999, Trooper Eddie Rose and Grove Police Department responded to a reported homicide where a body was found in the cemetery. Shortly after they arrived on the scene, an armed man confronted them. The officers directed him to surrender his weapon but he refused. Trooper Smith and the Delaware County Sheriff arrived to assist and during a struggle with the suspect, both officers were wounded from shots fired by the suspect. The suspect, Carlton Davis, then shot and killed himself. Trooper Smith suffered a gunshot to the neck and the injuries left him permanently and totally disabled. The shooting forced Trooper Smith to take medical retirement in 2000. Trooper Smith's injuries that day ultimately resulted in his death."
+                },
+                {
+                    name: 'Bill McClendon',
+                    rank: "Trooper",
+                    death: "October 1, 2006",
+                    joined: "1998",
+                    description: "Trooper McClendon was killed about 1:20 p.m. in an accident involving a tractor trailer on the Turnpike near Claremore. Trooper McClendon was responding to a call and pulled to the shoulder of the turnpike in preparation for a turnaround. As Trooper McClendon attempted the turn, he was struck by an oncoming tractor trailer. Trooper McClendon and the tractor trailer driver were both killed. Trooper McClendon is survived by his wife and three children."
+                },
+                {
+                    name: 'George Green',
+                    rank: "Captain",
+                    death: "October 26, 2010",
+                    joined: "1979",
+                    description: "Captain Green died on October 26, 2010 from injuries received in a traffic accident on October 25, 2010. Captain Green had exited the Turner Turnpike at the State Highway 97 exit near Sapulpa when his patrol vehicle was struck by a dump truck at an intersection. Captain Green was a graduate of the 37th Oklahoma Highway Patrol Academy and was the Troop Commander of the Turner, Kilpatrick and Cimmaron turnpikes. Captain Green is survived by his wife, two sons and a grandchild."
+                },
+                {
+                    name: 'Nicholas Dees',
+                    rank: "Trooper",
+                    death: "January 31, 2015",
+                    joined: "2013",
+                    description: "On January 31, 2015, Trooper Nicholas Dees and Trooper Keith Burch had been dispatched to investigate a collision involving a tractor-trailer on Interstate 40 in Seminole County near the Pottowatomie County line. While both Troopers were standing outside their patrol units investigating the collision, a driver failed to yield to their warning lights, traveled into the collision scene and struck both Troopers. Trooper Dees died instantly. Trooper Burch received serious injuries. The driver of the vehicle was charged with manslaughter."
+                },
+                {
+                    name: 'Heath Meyer',
+                    rank: "Lieutenant",
+                    death: "July 24, 2017",
+                    joined: "2005",
+                    description: "On the night of July 14, 2017, Troopers were pursuing driver D’angelo Burgess, who fled from a traffic stop and led Troopers on a high-speed pursuit. Lieutenant Meyer deployed stop sticks near I-35 and 27th Street in Moore. Burgess managed to avoid the stop sticks, but two Troopers in pursuit braked quickly and their vehicles collided, striking Lieutenant Meyer. Burgess was taken into custody a short time later and charged with several crimes, including First Degree Murder. Lieutenant Meyer succumbed to his injuries July 24, 2017. He is survived by his wife and two children."
+                },
+                {
+                    name: 'Daniel Boyd Martin',
+                    rank: "Trooper",
+                    death: "April 23, 2018",
+                    joined: "2007",
+                    description: "Trooper Daniel Boyd Martin was assigned to the Seminole Hughes County detachment of Troop D. On March 1, 2018 Trooper Martin made several violator contacts at high speeds during his shift, including two felony arrests. After completing his shift, Trooper Martin suffered a heart attack. He was not released back to work and began rehabilitation. On April 22, 2018, Trooper Martin suffered sudden cardiac arrest, a complication from the original event the month prior. Attempts to revive him were not successful and he was pronounced dead on April 23, 2018."
+                },
+                {
+                    name: 'Jeff Wade Sewell',
+                    rank: "Captain",
+                    death: "September 26, 2020",
+                    joined: "1988",
+                    description: "On September 26, 2020, Captain Sewell died from complications of Coronavirus-19 contracted while on duty with the OHP. Captain Sewell was assigned to the department’s Officer Assistance Program, where he frequently traveled the state providing counseling and personal assistance to members of the department. Beginning on August 5, 2020, through a period of three weeks, Sewell had at least 23 instances where he was documented to be in a public place where the exposure risk of COVID-19 was unknown. Additionally, there were 16 other instances where he conducted face to face meetings with employees or groups of employees that may have carried the COVID-19 virus."
+                }
+            ]
+
+            let innerHtml = "";
+
+            data.forEach((person, index) => {
+            innerHtml += `
+                <div class="card" key="${index}">
+                    <div class="row">
+                        <div class="col" id="img-div">
+                            <img class="col" id="image">
+                                <p id="img-caption">
+                                    Passed away ${person.death}
+                                </p>
+                            </img>
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+                                <h5 class="card-title">${person.rank} ${person.name}</h5>
+                                <p class="card-text">${person.description}</p>
+                                <p class="card-text"><small class="text-muted">Joined the OHP in ${person.joined}</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `});
+
+            $(document).ready(() => {
+                $("tribute-info").html(innerHtml);
+            })
+        </script>
+    </body>
+</html>
+
